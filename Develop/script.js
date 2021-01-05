@@ -1,14 +1,9 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
+var passwordText = document.getElementById("password");
+var generateButton = document.getElementById("generate");
+var copyButton = document.getElementById("copyClipboard");
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+const numChars = "1234567890";
+const speecialChars = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
 
-  passwordText.value = password;
-
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);

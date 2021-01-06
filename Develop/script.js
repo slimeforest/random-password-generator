@@ -51,3 +51,10 @@ function generateRandomPassword() {
   
 };
 
+copyButton.addEventListener("click", function(){
+  passwordText.select();
+  document.execCommand("copy");
+  passwordText.innerHTML = "";
+  alert("Copied to clipboard.")
+})
+

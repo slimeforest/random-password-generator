@@ -45,9 +45,9 @@ function generateRandomPassword() {
       newPassword += passwordCharset.charAt(Math.floor(Math.random()*passwordCharset.length));
     }
     localStorage.setItem("password", newPassword);
-    let NewPasswordStr = localStorage.getItem("password");
-    passwordText.innerHTML="";
+    document.getElementById("password").value = newPassword
   }
   console.log(newPassword);
+  
 };
 
